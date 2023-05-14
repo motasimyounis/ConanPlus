@@ -1,0 +1,167 @@
+{% extends 'base-ar.html' %}
+{% block title %}تواصل معنا{% endblock title %}
+{% block content %}
+{% load static %}
+  <section id="hero-animated4 " class="hero-animated3 d-flex align-items-center">
+    <div class="container d-flex  justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+      
+      <div class="content justify-content-start">
+        <h2 class="color-white "><span id="Text-4"></span></h2>
+      </div>
+      
+      
+    </div>
+  </section>
+  
+
+  <main id="main"> 
+<section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-header">
+        <h2>سنكون سعداء بتواصلك معنا الآن</h2>
+        <p>اتصل بنا للاستشارات والاستفسارات وعروض الأسعار وتفاصيل أخرى</p>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="row gy-5 gx-lg-5">
+        <div class="col-lg-12 ">
+          <div class="m1 row">
+            <div class="p1 d-flex gap-3 align-items-center col-lg-3 col-md-6">
+              <div class="icon dark"><i class="bi bi-geo-alt-fill"></i></div>
+              <div class="content">
+                <h5>موقعنا</h5>
+                <span>فلسطين-غزة</span>
+              </div>
+            </div>
+            <div class="p2 d-flex gap-3 align-items-center   col-lg-3 col-md-6">
+              <div class="icon dark"><i class="bi bi-telephone-fill"></i></div>
+              <div class="content">
+                <h5>الهاتف</h5>
+                <span>+972 56-710-6083</span>
+              </div>
+            </div>
+            <div class="p3 d-flex gap-3 align-items-center   col-lg-3 col-md-6">
+              <div class="icon dark"><i class="bi bi-clock-history"></i></div>
+              <div class="content ">
+                <h5>ساعات العمل</h5>
+                <span class="d-block">9:00 AM - 8:00 PM</span>
+                <span>السبت - الخميس</span>
+              </div>
+            </div>
+            <div class="p1 d-flex gap-3 align-items-center  col-lg-3 col-md-6">
+              <div class="icon dark"><i class="bi bi-envelope-open-fill"></i></div>
+              <div class="content">
+                <h5>البريد الإلكتروني</h5>
+                <span>conanplus_tc@gmail.com</span>
+              </div>
+            </div>
+            <div class="p2 d-flex gap-3 align-items-center  col-lg-3 col-md-6">
+              <div class="icon dark"><i class="bi bi-whatsapp"></i></div>
+              <div class="content">
+                <h5>واتس آب</h5>
+                <span>+972 56-710-6083</span>
+              </div>
+            </div>
+            <div class="p3 d-flex gap-3 align-items-center   col-lg-3 col-md-6">
+              <div class="icon dark"><i class="bi bi-instagram"></i></div>
+              <div class="content">
+                <h5>إنستغرام</h5>
+                <span>@conanplus_tc</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>
+          /* CSS styles for the button */
+          .nice-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            background-color: #68bda0;
+            color: #FFFFFF;
+            border-radius: 10px;
+            
+          }
+      
+          .nice-button:hover {
+            background-color: #62c5a4;
+          }
+          .nice-form {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background-color: #f2f2f2;
+          }
+      
+          .nice-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color:#68bda0;
+          }
+      
+          .nice-form input[type="text"],
+          .nice-form input[type="email"],
+          .nice-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+          }
+      
+          .nice-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+          }
+      
+          .nice-form input[type="submit"]:hover {
+            background-color: #45a049;
+          }
+        </style>
+        
+        <div class="col-lg-12">
+          <form action="{% url 'contact-ar' %}" method="post" class="nice-form">
+            {% csrf_token %}
+            <div class="row">
+              <h2>تواصل معنا</h2>
+              {{form.name}}
+              <br>
+              {{form.email}}
+              {{form.subject}}
+              {{form.message}}
+            
+              <div class="ripple-effect text-center" style="padding:15px"><button class="nice-button" type="submit">أرسل رسالتك</button></div>
+            
+          </form>
+          
+        </div><!-- End Contact  -->
+
+
+      </div>
+
+    </div>
+  </section>
+  </main><!-- End #main -->
+ {% endblock content %}
+
+  {% block text %}
+  <script>
+    let typingText = new Typed("#Text-4",{
+      strings : ["إتصل بنا", "أرسل رسالة على البريد الإلكتروني الخاص بنا","تواصل معنا"],loop:true,typeSpeed :100,backSpeed:50,backDelay : 1000,
+    })
+  </script>
+  {% endblock text %}

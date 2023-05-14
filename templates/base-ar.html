@@ -1,0 +1,231 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>{% block title %}{% endblock title %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/logo.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="{% static 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap' %}" rel="stylesheet">
+  <link href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css' %}" rel="stylesheet">
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css '%}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <!-- Variables CSS Files. -->
+  <link href="{% static 'assets/css/variables.css' %}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<!-- Demo styles -->
+</head>
+<body>
+   <!-- ======= Header ======= -->
+   <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-around">
+
+      <a href="/ar" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <h1 class="logo color-white"><img width="140px" height="60px" src="{% static 'assets/img/logo/trace (1).svg' %}" alt=""></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+
+          
+
+          <li><a class="nav-link scrollto " href="/ar">الرئيسية</a></li>
+          
+          <li><a class="nav-link scrollto" href="/ar#Identity" >نبذة عنا</a></li>
+          <li class="dropdown"><a href="/ar#services"><span style = "padding:8px ;">  خدماتنا  </span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="/web/ar">تصميم و تطوير مواقع الويب</a></li>
+              <li class="active"><a href="/graphic/ar">التصميم الجرافيكي</a></li>
+              <li><a href="/mobile/ar">تطبيقات الهاتف</a></li>
+              <li><a href="/ui/ar">UX & UI</a></li>
+              <li><a href="/social/ar">إدارة منصات السوشيال ميديا
+                </a></li>
+              <li><a href="/motion/ar">فيديوهات الموشن جرافيك</a></li>
+              
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="/team/ar">فريقنا</a></li>
+          <li><a class="nav-link scrollto" href="/contact/ar">إتصل بنا</a></li>
+          <li class="dropdown"><a href="/ar"><span>AR         <img src="{% static 'assets/media/saudi-arabia.svg' %}" alt=""></span></a>
+            <ul>
+              <a href="/ar"><span>AR <img class="p-2" src="{% static 'assets/media/saudi-arabia.svg' %}" alt=""></span></a>
+              <a href="/"><span>EN <img class="p-2" src="{% static 'assets/media/flag.svg' %}" alt=""></span></a>
+            </ul>
+          </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none color-white"></i>
+      </nav><!-- .navbar -->
+
+      
+
+    </div>
+  </header><!-- End Header -->
+
+
+
+
+  {% block content %}
+  
+  
+
+
+  {% endblock content %}
+
+
+  {% if messages %}
+  <div class="alert alert-info" role="alert">
+    {% for message in messages %}
+      <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message.message }}</li>
+      {% endfor %}
+  </div>
+  {% endif %}
+
+
+
+  
+ <!-- ======= Footer ======= -->
+ <footer id="footer" class="footer">
+    
+  <div class="footer-content">
+    <div class="container">
+      
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-info">
+            <h3><img height="80px" src="{% static 'assets/img/footer-logo.svg' %}" alt=""></h3>
+            <p>
+              شارع العشرين <br>
+              غزة, فلسطين, النصيرات<br><br>
+              <strong dir="rtl">رقم التواصل :  </strong>972 56-751-0500 +<br>
+              <strong>البريد الإلكتروني:</strong> conanplus_tc@gmail.com  
+              <br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4 style="text-align: right !important;">روابط مختصرة</h4>
+          <ul>
+            <li class="d-flex gap-1"><i class="bi bi-chevron-left"></i> <a href="/ar">الرئيسية</a></li>
+            <li class="d-flex gap-1"><i class="bi bi-chevron-left"></i> <a href="/ar#Identity">نبذة عنا</a></li>
+            <li class="d-flex gap-1"><i class="bi bi-chevron-left"></i> <a href="/ar#services">خدماتنا</a></li>
+            <li class="d-flex gap-1"><i class="bi bi-chevron-left"></i> <a href="/team/ar">فريقنا</a></li>
+            <li class="d-flex gap-1"><i class="bi bi-chevron-left"></i> <a href="/contact/ar">إتصل بنا</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4 style="text-align: right !important;">خدماتنا</h4>
+          <ul>
+            <li class="d-flex gap-1"><i class="bi bi-chevron-left"></i> <a href="/web/ar">تصميم و تطوير مواقع الويب</a></li>
+            <li class="d-flex gap-1"><i class="bi bi-chevron-left"></i> <a href="/graphic/ar">التصميم الجرافيكي</a></li>
+            <li class="d-flex gap-1"><i class="bi bi-chevron-left"></i> <a href="/mobile/ar">تطبيقات الهاتف</a></li>
+            <li class="d-flex gap-1"><i class="bi bi-chevron-left"></i> <a href="/ui/ar">UX & UI</a></li>
+            <li class="d-flex gap-1"><i class="bi bi-chevron-left"></i> <a href="/social/ar">إدارة منصات السوشيال ميديا
+            </a></li>
+            <li class="d-flex gap-1"><i class="bi bi-chevron-left"></i> <a href="/motion/ar">فيديوهات الموشن جرافيك</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4 style="text-align: right !important;">إشترك بخدمة البريد الإلكتروني</h4>
+          <p>إستقبل كل ما هو جديد من خدماتنا المميزة على بريدك الإلكتروني</p>
+
+
+
+          <form action="" method="post" dir="ltr">
+            {% csrf_token %}
+            
+           
+              {{ form.email }}
+            
+            
+            <input type="submit" value="إشترك الآن" style="height: 100%;">
+          </form>
+          <br>
+          {% if form.errors %}
+        <div class="alert alert-danger" dir="ltr">
+          {% for field in form %}
+            {% for error in field.errors %}
+              {{ error }}
+              <br>
+            {% endfor %}
+          {% endfor %}
+          {% for error in form.non_field_errors %}
+            {{ error }}
+            <br>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-legal text-center">
+    <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+      <div class="d-flex flex-column align-items-center align-items-lg-start">
+        <div class="copyright">
+          &copy; حقوق النشر <strong><span>C O N A N</span></strong> جميع الحقوق محفوظة .
+        </div>
+      </div>
+
+      <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+        <a href="https://twitter.com/conanplus_tc?s=21" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+        <a href="https://www.facebook.com/conanplus.tc" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://instagram.com/conanplus_tc?igshid=YmMyMTA2M2Y=" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.behance.net/conanplus/projects" class="google-plus" target="_blank"><i class="bi bi-behance"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin" target="_blank"></i></a>
+        <a href="https://wa.me/message/VALHTICEZKIYN1" class="linkexdin"><i class="bi bi-whatsapp" target="_blank"></i></a>
+        <a href="http://www.tiktok.com/@conanplus_tc" class="linkedin"><i class="bi bi-tiktok" target="_blank"></i></a>
+        <a href="https://t.me/conanplus_tc" class="linkedin"><i class="bi bi-telegram" target="_blank"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+</footer><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+  <!-- Vendor JS Files -->
+  <script type="text/javascript" src="{% static 'assets/js/particles.js' %}"></script>
+  <script type="text/javascript" src="{% static 'assets/js/app.js' %}"></script>
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+ {% block text %}
+  
+ {% endblock text %}
+
+</body>
+</html>

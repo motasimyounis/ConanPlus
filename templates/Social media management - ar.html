@@ -1,0 +1,172 @@
+{% extends 'base-ar.html' %}
+
+{% block title %}منصات التواصل الاجتماعي{% endblock title %}
+{% load static %}
+{% block content %}
+<section id="hero-animated " class="hero-animated2 ">
+    <div class="content ">
+        <div class="container d-flex  justify-content-around align-items-center text-center position-relative" data-aos="zoom-out">
+            <div class="content justify-content-start">
+                <h2 class="color-white ">إدارة  <span id="Text-4"></span></h2>
+                <p class="color-white ">إليك الصفحات التي نقوم بإدارتها على منصات السوشيال ميديا</p>
+                    <div class="d-flex gap-3 justify-content-start">
+                        <div class="d-none d-lg-flex ms-2">
+                    </div>
+                </div>
+            </div>
+                <img src="{% static 'assets/img/head-img-services/sochial-media.png' %}" class="img-fluid animated">
+            </div>
+            <div class="d-flex  justify-content-center align-items-center text-center position-relative">
+                    <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb" dir="ltr">
+                      <li class="breadcrumb-item color-white"><a href="index - ar.html">الرئيسية</a></li>
+                      <li class="breadcrumb-item color-white"><a href="index - ar.html#services">خدماتنا</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">إدارة حسابات السوشيال ميديا</li>
+                    </ol>
+                </nav>
+            </div>
+        
+    </div>
+    
+    
+</section>
+
+<main id="main"> 
+
+      <!-- ======= Portfolio Section ======= -->
+      <section id="portfolio" class="portfolio" data-aos="fade-up">
+
+        <div class="container">
+  
+          <div class="section-header">
+            <h2>ملف أعمالنا لإدارة صفحات السوشيال ميديا</h2>
+          <p>تصفح الصفحات التي نقوم بإدارتها على فيس بوك وإنستقرام وغيرهم من منصات السوشيال ميديا</p>
+          </div>
+  
+        </div>
+  
+        <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
+  
+          <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+  
+            <ul class="portfolio-flters">
+              <li data-filter="*" class="filter-active">الجميع</li>
+              <li data-filter=".filter-facebook">فيسبوك</li>
+              <li data-filter=".filter-instagram">إنستغرام</li>
+              <li data-filter=".filter-behance">بيهانس</li>
+            </ul><!-- End Portfolio Filters -->
+  
+            <div class="row g-0 portfolio-container" dir="ltr">
+  
+              {% for so in social %}
+              {% if forloop.second %}
+              <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-active">
+                <img src="{{so.image.url}}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{so.name}}</h4>
+                  <a href="{{so.mockup.url}}" title="{{so.name}}" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{so.url}}" title="More Details" target="_blank" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div><!-- End Portfolio Item -->
+              {% endif %}
+
+           
+                {% if so.type == "facebook" %}
+              <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-facebook">
+                  
+                <img src="{{so.image.url}}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{so.name}}</h4>
+                  <a href="{{so.mockup.url}}" title="{{so.name}}" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{so.url}}" title="More Details" target="_blank" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div><!-- End Portfolio Item -->
+              
+              
+                 {% elif so.type == "instagram" %}
+              <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-instagram">
+               
+                <img src="{{so.image.url}}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{so.name}}</h4>
+                  <a href="{{so.mockup.url}}" title="{{so.name}}" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{so.url}}" title="More Details" target="_blank" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div><!-- End Portfolio Item -->
+              
+
+              {% else %}
+                
+              <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-behance">
+                <img src="{{so.image.url}}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>{{so.name}}</h4>
+                  <a href="{{so.mockup.url}}" title="{{so.name}}" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{{so.url}}" title="More Details" target="_blank" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+
+              {% endif %}
+
+
+
+            
+              {% endfor %}
+            </div><!-- End Portfolio Container -->
+  
+          </div>
+  
+        </div>
+      </section><!-- End Portfolio Section -->
+<!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  breakpoints: {
+    // 768 هو حجم الشاشة التي تعرض فيها السلايدات كسلايد واحد
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    // 1024 هو حجم الشاشة التي تعرض فيها السلايدات كثلاثة سلايدات
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  }
+});
+;
+      </script>
+    </section><!-- End Team Section -->
+    
+    
+    </main><!-- End #main -->
+    {% endblock content %}
+
+    {% block text %}
+  <script>
+    let typingText = new Typed("#Text-4",{
+      strings : ["صفحات السوشيال ميديا", "خدماتك على السوشيال ميديا"],loop:true,typeSpeed :100,backSpeed:50,backDelay : 1000,
+    })
+  </script>
+{% endblock text %}
