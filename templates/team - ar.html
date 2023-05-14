@@ -43,6 +43,7 @@
     
     <div class="row d-flex teamates gap-5 justify-content-center">
       {% for te in team %}
+      {% if te.person_name != "خالد طبازة" and te.field != "المدير التنفيذي" %}
       <div class="boxes col-lg-3 col-sm-6">
         <div class="img">
           <div class="person-img">
@@ -55,6 +56,7 @@
             <span> {{te.field}}</span>
         </div>
       </div>
+      {% endif %}
 {% endfor %}
 
     </div>
