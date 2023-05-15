@@ -16,7 +16,7 @@ def home(request):
     team =  Allteam.objects.filter(arabic = False , myteam=True)
     package = Package.objects.filter(arabic = False)
     que = Frequentlyquestion.objects.filter(arabic = False)
-   
+    
     if request.method == 'POST':
         form = SubscriptionForm(request.POST)
         if form.is_valid() and form != None:

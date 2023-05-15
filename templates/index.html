@@ -318,7 +318,72 @@ Request a Custom Service
           <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
         </div>
         <div class="row gy-4" style="text-align: left;">
-
+          <div class="container" data-aos="fade-up">
+            <div class="section-header">
+              <h2>Our Pricing</h2>
+              <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+            </div>
+            <div class="row gy-4" style="text-align: left;">
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="pricing-item featured">
+                  <div class="pricing-header">
+                    <h3 class="font-title-buy">Motion Graphics Videos</h3>
+                    <h4 style="color:white;"><span>Starting from </span><strong><sup>$</sup>199</strong></h4>
+                </div>
+                <ul style="text-align: left;">
+                    <li><i class="bi bi-dot"></i> <span>Duration: 1 minute</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Idea conceptualization</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Scriptwriting</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Scene illustration</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Sound effects + Voiceover</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Editing and final production</span></li>
+                </ul>
+                  <div class="text-center mt-auto">
+                    <a href="https://api.whatsapp.com/message/VALHTICEZKIYN1?autoload=1&app_absent=0" class="buy-btn" target="_blank">Buy Naw</a>
+                  </div>
+                </div>
+              </div><!-- End Pricing Item -->
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="400" style="text-align: left;">
+                <div class="pricing-item featured">
+                  <div class="pricing-header">
+                    <h3 class="font-title-buy">Social Media Management</h3>
+                    <h4 style="color:white;"><span>Starting from </span><strong><sup>$</sup>99</strong></h4>
+                </div>
+                <ul style="text-align: left;">
+                    <li><i class="bi bi-dot"></i> <span>Publishing 15 interactive and engaging posts</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Designing post images that align with the company's identity</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Creating 8 Stories</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Managing the Facebook page</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Managing the Instagram account</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Providing monthly performance reports for social media accounts</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Setting up automated welcome responses for the accounts</span></li>
+                </ul>
+                <div class="text-center mt-auto">
+                    <a href="https://api.whatsapp.com/message/VALHTICEZKIYN1?autoload=1&app_absent=0" class="buy-btn" target="_blank">Buy Now</a>
+                </div>
+                </div>
+              </div><!-- End Pricing Item -->
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="600">
+                <div class="pricing-item featured">
+                  
+                  <div class="pricing-header ">
+                    <h3 class="font-title-buy">Web Design & Development</h3>
+                    <h4 style="color:white;"><span>Starting from </span><strong><sup>$</sup>249</strong></h4>
+                </div>
+                <ul style="text-align: left;">
+                    <li><i class="bi bi-dot"></i> <span>Complete UI & UX system analysis and design</span></li>
+                    <li><i class="bi bi-dot"></i> <span>You can choose the development environment for your website or store</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Programming languages that can be used: JS, PHP/Laravel, Python</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Free domain for one year</span></li>
+                    <li><i class="bi bi-dot"></i> <span>Preparing SEO for your website or store to ensure excellent visibility on all search engines</span></li>
+                </ul>
+                <div class="text-center mt-auto">
+                    <a href="https://api.whatsapp.com/message/VALHTICEZKIYN1?autoload=1&app_absent=0" class="buy-btn" target="_blank">Buy Now</a>
+                </div>
+                </div>
+              </div><!-- End Pricing Item -->
+            </div>
+          </div>
 
         {% for pa in package %}
           {% if pa.arabic == False  %}
@@ -329,7 +394,7 @@ Request a Custom Service
                 <h4 style="color:white;"><span>Starting from </span><strong><sup>$</sup>{{pa.price}}</strong></h4>
             </div>
             <ul style="text-align: left;">
-               <li> {{pa.points }}</li>
+               <li> {{pa.points|safe}}</li>
             </ul>
               <div class="text-center mt-auto">
                 <a href="https://api.whatsapp.com/message/VALHTICEZKIYN1?autoload=1&app_absent=0" class="buy-btn" target="_blank">Buy Naw</a>

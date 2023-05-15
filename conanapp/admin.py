@@ -50,7 +50,7 @@ class NewAdmin8(admin.ModelAdmin):
 
 
 admin.site.register(Allteam,NewAdmin)
-admin.site.register(Package,NewAdmin5)
+# admin.site.register(Package,NewAdmin5)
 admin.site.register(Services,NewAdmin6)
 admin.site.register(Graphicdesign,NewAdmin3)
 admin.site.register(Socialmedia,NewAdmin7)
