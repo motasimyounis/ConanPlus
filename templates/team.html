@@ -28,7 +28,7 @@
   <div class="container">
     <div class="row">
       <div class="box1 SEO col-12">
-      <div class="img">
+      <div class="img" style="background:url({% static 'assets/img/team/bg-team.svg' %})no-repeat center center;">
         <div class="person-img">
           <!-- 250px × 250px  -->
           <img src="{% static 'assets/img/team/khaled.png' %}" alt="">
@@ -46,8 +46,8 @@
       
       {% if te.person_name != "Khaled Tabaza" and te.field != "CEO" %}
       <div class="boxes col-lg-3 col-sm-6">
-        <div class="img">
-          <div class="person-img">
+        <div class="img" style="background: url({% static 'assets/img/team/bg-team.svg' %)no-repeat center center;">
+          <div class="person-img" style="background: url({% static 'assets/img/team/bg-team.svg' %)no-repeat center center;">
             <!-- 250px × 250px  -->
             <img src="{{te.image.url}}" alt="">
               </div>
