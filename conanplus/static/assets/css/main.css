@@ -227,6 +227,30 @@ footer .footer-content #particles-js2{
   }
 }
 
+
+@media (max-width:376px) {
+  html body main#main section#Identity.about div.container.aos-init.aos-animate div.row div.col-lg-6 div.content.d-flex.flex-column.justify-content-center.h-100 ul.gap-5.d-flex li.d22{
+    margin-left: -31px;
+  }
+}
+
+@media (max-width: 376px) {
+
+dl, ol, ul {
+
+  margin-right: -20px;
+}
+
+  html body main#main section#Identity.about div.container.aos-init.aos-animate div.row div.col-lg-6 div.content.d-flex.flex-column.justify-content-center.h-100 h3 {
+    font-size: 19px;
+    font-weight: bold;
+    
+}}
+
+  
+  
+
+
 /*--------------------------------------------------------------
 # Scroll top button
 --------------------------------------------------------------*/
