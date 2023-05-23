@@ -6,7 +6,6 @@
     line-height: 0;
     margin-left: 0;
     margin-right: 5px;
-    
 }
 }
 @font-face {
@@ -111,4 +110,9 @@ h1,h2,h3,h4,h5,h6,p{
   background-color: #68BDA0;
   right: 350px;
   top: 2px;
+}
+
+.swiper-button-next, .swiper-ltr .swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset,30px);
+  left: auto;
 }
